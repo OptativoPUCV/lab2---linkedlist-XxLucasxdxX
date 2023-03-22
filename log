@@ -18,3 +18,11 @@ Wed 22 Mar 2023 03:01:09 PM UTC:
  tests:  5|4
 total_score: 25/70
 7add322
+Wed 22 Mar 2023 03:01:39 PM UTC: 
+ list.c | 60 +++++++++++++++++++++++++++++++++++++++++++-----------------
+ 1 file changed, 43 insertions(+), 17 deletions(-)
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccUu8XSY.o: in function `pushCurrent':
+test.c:(.text+0x175): undefined reference to `pushBack'
+collect2: error: ld returned 1 exit status
+Compilation failed
+9f00e24
