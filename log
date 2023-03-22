@@ -1,0 +1,8 @@
+Wed 22 Mar 2023 02:58:36 PM UTC: 
+ list.c | 72 ++++++++++++++++++++++++++++++++++++++++++++++++++----------------
+ 1 file changed, 55 insertions(+), 17 deletions(-)
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/ccnidm61.o: in function `pushCurrent':
+test.c:(.text+0x175): undefined reference to `pushBack'
+collect2: error: ld returned 1 exit status
+Compilation failed
+2ae3b75
