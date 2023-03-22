@@ -26,3 +26,9 @@ test.c:(.text+0x175): undefined reference to `pushBack'
 collect2: error: ld returned 1 exit status
 Compilation failed
 9f00e24
+Wed 22 Mar 2023 03:06:31 PM UTC: 
+ list.c | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+ tests:  12|0
+total_score: 70/70
+3efe6ba
