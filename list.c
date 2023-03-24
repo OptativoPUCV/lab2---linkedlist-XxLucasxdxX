@@ -121,7 +121,18 @@ void * popFront(List * list) {
 }
 
 void * popBack(List * list) {
-  return  NULL;
+  if(list->tail==NULL) return NULL;
+  Node  * NodoElimiar = list->tail;
+  void * data =  NodoElimiar->data;
+  if(list->head==list->tail)
+  {
+    list->head=NULL;
+    list->tail=NULL;
+  } else {
+    list->tail=NodoElimiar->prev;
+    list->tail->next=NULL;
+  }
+  return  data;
 }
 
 void * popCurrent(List * list) {
