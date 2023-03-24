@@ -121,7 +121,7 @@ void * popFront(List * list) {
 }
 
 void * popBack(List * list) {
-
+  return  NULL;
 }
 
 void * popCurrent(List * list) {
