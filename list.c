@@ -84,6 +84,7 @@ void pushBack(List * list, void * data) {
   } else {
     NuevoNodo->prev=list->tail;
     list->tail->next=NuevoNodo;
+    list->tail=NuevoNodo;
   }
 
 }
