@@ -78,12 +78,12 @@ void pushFront(List * list, void * data) {
 
 void pushBack(List * list, void * data) {
     Node * NuevoNodo = createNode(data);
-  if(list->head==NULL){
+  if(list->tail==NULL){
     list->head=NuevoNodo;
     list->tail=NuevoNodo;
   } else {
-    list->current->next->prev=NuevoNodo;
-    list->current->prev=NuevoNodo;
+    NuevoNodo->prev=list->tail;
+    list->tail->next=NuevoNodo;
   }
 
 }
