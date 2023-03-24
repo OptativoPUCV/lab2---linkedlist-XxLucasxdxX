@@ -136,7 +136,13 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-    return NULL;
+  if(list->current==NULL) return NULL;
+  Node  * NodoElimiar = list->current;
+  void * data =  NodoElimiar->data;
+  NodoElimiar->prev->next=NodoElimiar->next;
+  NodoElimiar->next->prev=NodoElimiar->prev;
+  
+  return data;
 }
 
 void cleanList(List * list) {
