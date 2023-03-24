@@ -141,7 +141,7 @@ void * popCurrent(List * list) {
   void * data =  NodoElimiar->data;
   if(list->current==list->head)
   {
-    list->head=list->current->next;
+    list->head=NodoElimiar->next;
   }
   
   NodoElimiar->prev->next=NodoElimiar->next;
