@@ -100,19 +100,28 @@ void pushCurrent(List * list, void * data) {
     list->current->next=NuevoNodo;
   } else {
     NuevoNodo->next = list->current->next;
-        
     list->current->next=NuevoNodo;
   }    
 }
 
 void * popFront(List * list) {
-    list->current = list->head;
-    return popCurrent(list);
+  if(list->head==NULL) return NULL;
+  Node  * NodoElimiar = list->head;
+  void * data =  NodoElimiar->data;
+  if(list->head==list->tail)
+  {
+    list->head=NULL;
+    list->tail=NULL;
+  } else {
+    list->head=NodoElimiar->next;
+    list->head->prev=NULL;
+  }
+  return data;
+  
 }
 
 void * popBack(List * list) {
-    list->current = list->tail;
-    return popCurrent(list);
+
 }
 
 void * popCurrent(List * list) {
@@ -120,7 +129,5 @@ void * popCurrent(List * list) {
 }
 
 void cleanList(List * list) {
-    while (list->head != NULL) {
-        popFront(list);
-    }
+
 }
