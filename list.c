@@ -142,6 +142,9 @@ void * popCurrent(List * list) {
   if(list->current==list->head)
   {
     list->head=NodoElimiar->next;
+    if(list->current==list->tail){
+      list->tail=NodoElimiar->prev;
+    }
     
   } else {
   NodoElimiar->prev->next=NodoElimiar->next;
