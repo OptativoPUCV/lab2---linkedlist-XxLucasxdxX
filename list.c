@@ -136,6 +136,7 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
+  
   if(list->current==NULL) return NULL;
   Node  * NodoElimiar = list->current;
   void * data =  NodoElimiar->data;
@@ -157,5 +158,15 @@ void * popCurrent(List * list) {
 }
 
 void cleanList(List * list) {
-
+  Node * NodoEliminar = list->head;
+  
+  while(NodoEliminar!=NULL) {
+    Node * next = NodoEliminar->next;
+    free(NodoEliminar);
+    NodoEliminar=next;
+  }
+  
+  list->head=NULL;
+  list->tail=NULL;
+  list->current=NULL;
 }
